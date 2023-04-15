@@ -29,5 +29,4 @@ switch (catalogo) {
         break;
 
     default:
-        
 }
