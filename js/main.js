@@ -4,7 +4,7 @@ function solicitarNombre() {
     let nombre = prompt("Ingrese su nombre: ");
     let ingreso = prompt("Si desea comprar ingrese SI, de lo contrario ESC para salir");
 
-    if (ingreso == "SI") {
+    if (ingreso == "SI" || "si") {
     alert("Bienvenido/a: " +  nombre);
     } else {
     alert("Adios " + nombre);
@@ -30,3 +30,59 @@ switch (catalogo) {
 
     default:
 }
+
+const preciosPlantas = [
+    {
+        nombre: "monstera deliciosa",
+        precio: 2500
+    },
+    {
+        nombre: "palo de agua",
+        precio: 1500
+    },
+    {
+        nombre: "strelitzia Nicolai",
+        precio: 7000
+    },
+    {
+        nombre: "palmito",
+        precio: 1200
+    },
+    {
+        nombre: "agave",
+        precio: 800
+    },
+    {
+        nombre: "aloe vera",
+        precio: 750
+    },
+    {
+        nombre: "sansevieria",
+        precio: 900
+    },
+    {
+        nombre: "chlorophytum",
+        precio: 500
+    },
+    {
+        nombre: "echeveria lola",
+        precio: 1200
+    },
+    {
+        nombre: "lauii",
+        precio: 1800
+    },
+    {
+        nombre: "graptopetalum",
+        precio: 350
+    },
+    {
+        nombre: "agavoides",
+        precio: 400
+    },
+];
+
+let plantaElegida = prompt("Ingrese la planta que desea comprar: ");
+console.log(preciosPlantas.find ((plantas) => plantas.nombre === plantaElegida));
+
+
