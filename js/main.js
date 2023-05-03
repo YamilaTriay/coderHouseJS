@@ -83,6 +83,10 @@ const preciosPlantas = [
 ];
 
 let plantaElegida = prompt("Ingrese la planta que desea comprar: ");
-console.log(preciosPlantas.find ((plantas) => plantas.nombre === plantaElegida));
+console.log(preciosPlantas.filter ((plantas) => plantas.nombre === plantaElegida));
+
+alert (plantaElegida);
+
+
 
 
