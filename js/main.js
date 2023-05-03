@@ -85,7 +85,7 @@ const preciosPlantas = [
 let plantaElegida = prompt("Ingrese la planta que desea comprar: ");
 console.log(preciosPlantas.filter ((plantas) => plantas.nombre === plantaElegida));
 
-alert (plantaElegida);
+alert ("Elegiste la siguiente planta: " + (plantaElegida));
 
 
 
