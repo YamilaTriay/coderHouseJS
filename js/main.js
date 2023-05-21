@@ -1,92 +1,154 @@
 
-
-function solicitarNombre() {
-    let nombre = prompt("Ingrese su nombre: ");
-    let ingreso = prompt("Si desea comprar ingrese SI, de lo contrario ESC para salir");
-
-    if (ingreso == "SI" || "si") {
-    alert("Bienvenido/a: " +  nombre);
-    } else {
-    alert("Adios " + nombre);
-    }
-}
-
-solicitarNombre();
-
-let catalogo =  prompt("Ingrese la seccion de plantas que desea ver: interior, exterior o suculentas");
-
-switch (catalogo) {
-    case "interior":
-        alert("1-Monstera deliciosa, 2-Palo de agua, 3-Strelitzia Nicolai, 4-Palmito")
-        break;
-
-    case "exterior":
-        alert("1-Agave, 2-Aloe vera, 3-Sansevieria, 4-Chlorophytum")
-        break;
-
-    case"suculentas":
-        alert("1-Echeveria lola, 2-Lauii, 3-Graptopetalum, 4-Agavoides")
-        break;
-
-    default:
-}
+const shopContent = document.getElementById("shopContent");
+const verCarrito = document.getElementById("verCarrito");
+const modalContainer = document.getElementById("modal-container");
 
 const preciosPlantas = [
     {
+        id: 1,
         nombre: "monstera deliciosa",
-        precio: 2500
+        precio: 2500,
+        img: "../img/monstera.jpg",
     },
     {
+        id: 2,
         nombre: "palo de agua",
-        precio: 1500
+        precio: 1500,
+        img: "../img/palodeagua.jpg",
     },
     {
+        id: 3,
         nombre: "strelitzia Nicolai",
-        precio: 7000
+        precio: 7000,
+        img: "../img/nicolaii.png",
     },
     {
+        id: 4,
         nombre: "palmito",
-        precio: 1200
+        precio: 1200,
+        img: "../img/palmito.jpg",
     },
     {
+        id: 5,
         nombre: "agave",
-        precio: 800
+        precio: 800,
+        img: "../img/agave.jpg",
     },
     {
+        id: 6,
         nombre: "aloe vera",
-        precio: 750
+        precio: 750,
+        img: "../img/aloe.jpg",
     },
     {
+        id: 7,
         nombre: "sansevieria",
-        precio: 900
+        precio: 900,
+        img: "../img/Sansevieria.jpg"
     },
     {
+        id: 8,
         nombre: "chlorophytum",
-        precio: 500
+        precio: 500,
+        img: "../img/malamadre.jpg",
     },
     {
+        id: 9,
         nombre: "echeveria lola",
-        precio: 1200
+        precio: 1200,
+        img: "../img/lola.jpg",
     },
     {
+        id: 10,
         nombre: "lauii",
-        precio: 1800
+        precio: 1800,
+        img: "../img/lauii.jpg",
     },
     {
+        id: 11,
         nombre: "graptopetalum",
-        precio: 350
+        precio: 350,
+        img: "../img/graptopetalum.jpg",
     },
     {
+        id: 12,
         nombre: "agavoides",
-        precio: 400
+        precio: 400,
+        img: "../img/agavoides.jpg",
     },
 ];
 
-let plantaElegida = prompt("Ingrese la planta que desea comprar: ");
-console.log(preciosPlantas.filter ((plantas) => plantas.nombre === plantaElegida));
 
-alert ("Elegiste la siguiente planta: " + (plantaElegida));
+let carrito = [];
+
+preciosPlantas.forEach((productos)=> {
+    let contenido = document.createElement("div");
+    contenido.className = "card";
+    contenido.innerHTML = `
+        <img src="${productos.img}">
+        <h3>${productos.nombre}</h3>
+        <p class="price">${productos.precio} $</p>
+    `;
 
 
+    shopContent.append(contenido);
 
+    let comprar = document.createElement("button")
+    comprar.innerText = "comprar";
+    comprar.className = "comprar"
+
+    contenido.append(comprar);
+
+    comprar.addEventListener("click", () =>{
+        carrito.push({
+            id : productos.id,
+            img: productos.img,
+            nombre: productos.nombre,
+            precio: productos.precio,
+        });
+        console.log(carrito);
+    });
+
+});
+
+verCarrito.addEventListener("click", () => {
+    modalContainer.innerHTML = "";
+    modalContainer.style.display = "flex";
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modalHeader.innerHTML = `
+        <h1 class="modal-header-title">Carrito.</h1>
+    `;
+    modalContainer.append(modalHeader);
+
+    const modalbutton = document.createElement("h1");
+    modalbutton.innerText = "x";
+    modalbutton.className = "modal-header-button";
+
+    modalbutton.addEventListener("click", () => {
+        modalContainer.style.display = "none";
+    });
+
+    modalHeader.append(modalbutton);
+
+
+    carrito.forEach((productos) => {
+        let carritoContenido = document.createElement("div");
+        carritoContenido.className = "modal-content";
+        carritoContenido.innerHTML = `
+        <img src= "${productos.img}">
+        <h3>${productos.nombre}</h3>
+        <p>${productos.precio} $</p>
+        `;
+
+        modalContainer.append(carritoContenido);
+    });
+
+    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+
+    const totalBuying = document.createElement("div");
+    totalBuying.className = "total-content";
+    totalBuying.innerHTML =  `total a pagar: ${total} $`;
+    modalContainer.append(totalBuying);
+});
 
