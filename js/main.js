@@ -8,43 +8,43 @@ const preciosPlantas = [
         id: 1,
         nombre: "monstera deliciosa",
         precio: 2500,
-        img: "https://images.squarespace-cdn.com/content/v1/5dd86eda07db674ed859c949/1623896282158-1UY4YOEMHP0OOAV4YK76/monster-deliciosa-interior-design-theodora-melnik.jpg",
+        img: "../img/monstera.jpg",
     },
     {
         id: 2,
         nombre: "palo de agua",
         precio: 1500,
-        img: "https://d22fxaf9t8d39k.cloudfront.net/b2a5dc9597d9fe1ef0ee33c92b03ed8e04d77f28ec86108cb842e6463bf9a12b94052.jpeg",
+        img: "../img/palodeagua.jpg",
     },
     {
         id: 3,
         nombre: "strelitzia Nicolai",
         precio: 7000,
-        img: "https://static.wixstatic.com/media/708f89_65caeee11d3d4e218faf878f4eb89672~mv2.jpg/v1/fill/w_600,h_877,al_c,q_85/708f89_65caeee11d3d4e218faf878f4eb89672~mv2.jpg",
+        img: "../img/nicolaii.png",
     },
     {
         id: 4,
         nombre: "palmito",
         precio: 1200,
-        img: "https://plantasfaitful.com.ar/wp-content/uploads/2020/04/Plantas-Faitful-Plantas-Interior-palmera-palmito-m12.jpg",
+        img: "../img/palmito.jpg",
     },
     {
         id: 5,
         nombre: "agave",
         precio: 800,
-        img: "https://e3f5r4c7.rocketcdn.me/wp-content/uploads/2023/01/74010010_2.jpg",
+        img: "../img/agave.jpg",
     },
     {
         id: 6,
         nombre: "aloe vera",
         precio: 750,
-        img: "https://images.hola.com/imagenes/decoracion/20230216226399/aloe-vera-cuidados-reproduccion-plantas-interior-exterior-il/1-203-969/cuidar-aloe-vera-01m-m.jpg?tx=w_680",
+        img: "../img/aloe.jpg",
     },
     {
         id: 7,
         nombre: "sansevieria",
         precio: 900,
-        img: ""
+        img: "../img/Sansevieria.jpg"
     },
     {
         id: 8,
