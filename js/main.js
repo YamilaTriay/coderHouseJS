@@ -5,10 +5,10 @@ const modalContainer = document.getElementById("modal-container");
 
 const preciosPlantas = [
     {
-        id: 1,
-        nombre: "monstera deliciosa",
-        precio: 2500,
-        img: "../img/monstera.jpg",
+        "id": 1,
+        "nombre": "monstera deliciosa",
+        "precio": 2500,
+        "img": "../img/monstera.jpg",
     },
     {
         id: 2,
