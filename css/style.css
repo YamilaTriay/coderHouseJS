@@ -157,3 +157,19 @@ body {
     text-align: center;
     padding-top: 20px;
 }
+
+.delete-product {
+    cursor: pointer;
+}
+
+.cantidad-carrito {
+    background-color: #756168;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 4px;
+    top: 48px;
+    right: 10px;
+    position: absolute;
+    display: none;
+}
