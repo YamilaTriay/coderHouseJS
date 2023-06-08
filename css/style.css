@@ -18,10 +18,11 @@ body {
 .navbar-logo {
     justify-self: start;
     margin-left: 20px;
-    color: black;
+    color: white;
     margin-top: 4vh;
     cursor: pointer;
 }
+
 
 .ver-carrito {
     font-size: 25px;
@@ -55,6 +56,10 @@ body {
     color: white;
     opacity: 0.7;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.libreria{
+    color: #79998f;
 }
 
 .shop-content{
@@ -100,6 +105,7 @@ body {
 .card button:hover{
     opacity: 0.7;
 }
+
 
 .modal-container {
     width: 80%;
@@ -173,3 +179,4 @@ body {
     position: absolute;
     display: none;
 }
+

@@ -1,21 +1,3 @@
-// let productos = document.querySelector("#productos-plantas");
-
-// fetch("data.json")
-// .then((resp) => resp.json())
-// .then((data) => {
-//     console.log(data.results);
-
-//     data.map((item) => {
-//         const content = document.createElement("div");
-//         content.innerHTML = `
-//         <h4>${item.nombre}</h4>
-//         <h4>${item.precio}</h4>
-//         <img src="${item.img}"></img>
-//         `;
-//         productos.append(content);
-
-//     });
-// });
 
 
 const shopContent = document.getElementById("shopContent");
@@ -76,7 +58,7 @@ const getProductos = async () => {
         const modalHeader = document.createElement("div");
         modalHeader.className = "modal-header"
         modalHeader.innerHTML = `
-            <h1 class="modal-header-title">Carrito.</h1>
+            <h1 class="modal-header-title">Productos seleccionados:</h1>
         `;
         modalContainer.append(modalHeader);
     
@@ -118,7 +100,7 @@ const getProductos = async () => {
     
         const totalBuying = document.createElement("div");
         totalBuying.className = "total-content";
-        totalBuying.innerHTML =  `total a pagar: $ ${total} `;
+        totalBuying.innerHTML =  `Total a pagar: $ ${total} `;
         modalContainer.append(totalBuying);
     };
 
@@ -141,4 +123,35 @@ const carritoCounter = () => {
 };
 
 getProductos();
+
+
+Swal.fire({
+    title: 'En este sitio encontrarás todo tipo de plantas para tu hogar. ¿Deseas continuar para comprar?',
+    showDenyButton: true,
+    showCancelButton: true,
+    confirmButtonText: 'Continuar',
+    denyButtonText: `No, gracias`,
+}).then((result) => {
+    if (result.isConfirmed) {
+    Swal.fire('¡Bienvenido!', '', 'success')
+    } else if (result.isDenied) {
+    Swal.fire('Esperamos que vuelvas pronto', '', 'info')
+    }
+})
+
+Swal.fire (
+    {
+        title: 'Bienvenido, ¿Deseas comprar?',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        confirmButtonColor: '#87a39a',
+        denyButtonText: 'no',
+        denyButtonColor: '#57857b',
+        iconHtml: '<i class="bi bi-bag-heart"></i>',
+        iconColor: '#c1d9d4 ',
+        footer: '<span class="libreria">Selecciona una opción para continuar.</span>'
+    }
+);
+
 

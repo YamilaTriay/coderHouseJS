@@ -1,84 +1,84 @@
 [
     {
         "id": 1,
-        "nombre": "monstera deliciosa",
+        "nombre": "Monstera deliciosa",
         "precio": 2500,
         "img": "../img/monstera.jpg",
         "cantidad": 1
     },
     {
         "id": 2,
-        "nombre": "palo de agua",
+        "nombre": "Palo de agua",
         "precio": 1500,
         "img": "../img/palodeagua.jpg",
         "cantidad": 1
     },
     {
         "id": 3,
-        "nombre": "strelitzia Nicolai",
+        "nombre": "Strelitzia Nicolai",
         "precio": 7000,
         "img": "../img/nicolaii.png",
         "cantidad": 1
     },
     {
         "id": 4,
-        "nombre": "palmito",
+        "nombre": "Palmito",
         "precio": 1200,
         "img": "../img/palmito.jpg",
         "cantidad": 1
     },
     {
         "id": 5,
-        "nombre": "agave",
+        "nombre": "Agave",
         "precio": 800,
         "img": "../img/agave.jpg",
         "cantidad": 1
     },
     {
         "id": 6,
-        "nombre": "aloe vera",
+        "nombre": "Aloe vera",
         "precio": 750,
         "img": "../img/aloe.jpg",
         "cantidad": 1
     },
     {
         "id": 7,
-        "nombre": "sansevieria",
+        "nombre": "Sansevieria",
         "precio": 900,
         "img": "../img/Sansevieria.jpg",
         "cantidad": 1
     },
     {
         "id": 8,
-        "nombre": "chlorophytum",
+        "nombre": "Chlorophytum",
         "precio": 500,
         "img": "../img/malamadre.jpg",
         "cantidad": 1
     },
     {
         "id": 9,
-        "nombre": "echeveria lola",
+        "nombre": "Echeveria lola",
         "precio": 1200,
         "img": "../img/lola.jpg",
         "cantidad": 1
     },
     {
         "id": 10,
-        "nombre": "lauii",
+        "nombre": "Lauii",
         "precio": 1800,
         "img": "../img/lauii.jpg",
         "cantidad": 1
     },
     {
         "id": 11,
-        "nombre": "graptopetalum",
+        "nombre": "Graptopetalum",
         "precio": 350,
         "img": "../img/graptopetalum.jpg",
         "cantidad": 1
     },
     {
         "id": 12,
-        "nombre": "agavoides",
+        "nombre": "Agavoides",
         "precio": 400,
         "img": "../img/agavoides.jpg",
         "cantidad": 1
