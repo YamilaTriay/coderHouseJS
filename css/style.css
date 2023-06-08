@@ -103,7 +103,7 @@ body {
 }
 
 .card button:hover{
-    opacity: 0.7;
+    background: linear-gradient(-135deg, rgb(62, 119, 107), rgba(69, 94, 31, 0.644), rgb(135, 163, 154));
 }
 
 

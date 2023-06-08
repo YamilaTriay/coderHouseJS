@@ -125,20 +125,6 @@ const carritoCounter = () => {
 getProductos();
 
 
-Swal.fire({
-    title: 'En este sitio encontrarás todo tipo de plantas para tu hogar. ¿Deseas continuar para comprar?',
-    showDenyButton: true,
-    showCancelButton: true,
-    confirmButtonText: 'Continuar',
-    denyButtonText: `No, gracias`,
-}).then((result) => {
-    if (result.isConfirmed) {
-    Swal.fire('¡Bienvenido!', '', 'success')
-    } else if (result.isDenied) {
-    Swal.fire('Esperamos que vuelvas pronto', '', 'info')
-    }
-})
-
 Swal.fire (
     {
         title: 'Bienvenido, ¿Deseas comprar?',
@@ -152,6 +138,12 @@ Swal.fire (
         iconColor: '#c1d9d4 ',
         footer: '<span class="libreria">Selecciona una opción para continuar.</span>'
     }
-);
+).then((result) => {
+    if (result.isConfirmed) {
+        Swal.fire ('¡Bienvenido!', '', 'success')
+    } else if (result.isDenied) {
+        Swal.fire('Esperamos que vuelvas pronto', '', 'info')
+    }
+})
 
 
