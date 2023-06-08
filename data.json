@@ -17,7 +17,7 @@
         "id": 3,
         "nombre": "Strelitzia Nicolai",
         "precio": 7000,
-        "img": "../img/nicolaii.png",
+        "img": "./img/nicolaii.png",
         "cantidad": 1
     },
     {
