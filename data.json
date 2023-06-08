@@ -24,7 +24,7 @@
         "id": 4,
         "nombre": "Palmito",
         "precio": 1200,
-        "img": "../img/palmito.jpg",
+        "img": "./img/palmito.jpg",
         "cantidad": 1
     },
     {
